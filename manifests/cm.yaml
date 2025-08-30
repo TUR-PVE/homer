@@ -70,6 +70,11 @@ data:
             url: "https://blog.r2b001.site"
             tag: "Blog"
             target: "_blank"
+          - name: "Terminal Website"
+            icon: "fas fa-flag-checkered"
+            url: "https://terminal.app.r2b001.site"
+            tag: "Terminal"
+            target: "_blank"
 
       - name: "Applications"
         icon: "fas fa-th-large"
