@@ -47,10 +47,10 @@ data:
         background-image: "/assets/your/dark/bg.png"
 
     message:
-      style: "is-warning"
-      title: "Reminder"
+      style: "is-info"
+      title: "Information"
       icon: "fa fa-exclamation-triangle"
-      content: "Regularly monitor HAProxy, databases, and Kubernetes cluster health."
+      content: "The list of available apps, services, and APIs is updated automatically whenever a new endpoint is added or removed."
 
     links:
       - name: "GitHub"
