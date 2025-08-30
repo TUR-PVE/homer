@@ -52,15 +52,6 @@ data:
       icon: "fa fa-exclamation-triangle"
       content: "The list of available apps, services, and APIs is updated automatically whenever a new endpoint is added or removed."
 
-    links:
-      - name: "GitHub"
-        icon: "fab fa-github"
-        url: "https://github.com/bastienwirtz/homer"
-        target: "_blank"
-      - name: "Documentation"
-        icon: "fas fa-book"
-        url: "https://github.com/bastienwirtz/homer"
-
     services:
       - name: "Blogs"
         icon: "fas fa-globe"
