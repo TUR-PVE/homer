@@ -127,6 +127,15 @@ data:
             tag: "Backend"
             target: "_blank"
 
+      - name: "SOC"
+        icon: "fas fa-shield-alt"
+        items:
+          - name: "Security Onion"
+            icon: "fas fa-user-secret"
+            url: "https://so.service.r2b001.site/"
+            tag: "Security"
+            target: "_blank"
+
 ---
 apiVersion: v1
 kind: ConfigMap
