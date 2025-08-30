@@ -135,6 +135,11 @@ data:
             url: "https://so.service.r2b001.site/"
             tag: "Security"
             target: "_blank"
+          - name: "pfSense"
+            icon: "fas fa-shield-virus"
+            url: "https://www.youtube.com/shorts/SlZfoJS0zL4"
+            tag: "Firewall"
+            target: "_blank"
 
 ---
 apiVersion: v1
