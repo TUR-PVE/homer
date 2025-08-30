@@ -5,104 +5,107 @@ metadata:
   namespace: homer
 data:
   config.yml: |
-    title: "DevOps Dashboard"
-    subtitle: "All your hosted services & apps at a glance"
+    title: "TUR Infra"
+    subtitle: "Hosted Applications, Services & APIs"
     logo: "assets/logo.png"
     header: true
-    footer: '<p>Created with <span class="has-text-danger">❤️</span> using <a href="https://bulma.io/">Bulma</a>, <a href="https://vuejs.org/">Vue.js</a> & <a href="https://fontawesome.com/">Font Awesome</a></p>'
+    footer: '<p>🚀 Managed with <a href="https://homer-demo.netlify.app/" target="_blank">Homer</a> | Built with <span class="has-text-danger">❤️</span> by DevOps</p>'
     columns: "3"
     connectivityCheck: true
     defaults:
       layout: columns
       colorTheme: auto
+      target: "_blank"
     theme: default
+
     colors:
       light:
-        highlight-primary: "#3367d6"
-        highlight-secondary: "#4285f4"
-        highlight-hover: "#5a95f5"
-        background: "#f5f5f5"
+        highlight-primary: "#0066cc"
+        highlight-secondary: "#0099ff"
+        highlight-hover: "#3399ff"
+        background: "#f8f9fa"
         card-background: "#ffffff"
-        text: "#363636"
-        text-header: "#424242"
-        text-title: "#303030"
-        text-subtitle: "#424242"
-        card-shadow: rgba(0, 0, 0, 0.1)
-        link: "#3273dc"
-        link-hover: "#363636"
+        text: "#2c2c2c"
+        text-header: "#333333"
+        text-title: "#222222"
+        text-subtitle: "#555555"
+        card-shadow: rgba(0, 0, 0, 0.08)
+        link: "#0056b3"
+        link-hover: "#ff6600"
         background-image: "/assets/your/light/bg.png"
       dark:
-        highlight-primary: "#3367d6"
-        highlight-secondary: "#4285f4"
-        highlight-hover: "#5a95f5"
-        background: "#131313"
-        card-background: "#2b2b2b"
+        highlight-primary: "#0066cc"
+        highlight-secondary: "#0099ff"
+        highlight-hover: "#3399ff"
+        background: "#0f1115"
+        card-background: "#1c1f26"
         text: "#eaeaea"
         text-header: "#ffffff"
         text-title: "#fafafa"
-        text-subtitle: "#f5f5f5"
+        text-subtitle: "#bbbbbb"
         card-shadow: rgba(0, 0, 0, 0.4)
-        link: "#3273dc"
-        link-hover: "#ffdd57"
+        link: "#0099ff"
+        link-hover: "#ffcc00"
         background-image: "/assets/your/dark/bg.png"
 
     message:
       style: "is-info"
       title: "Information"
-      icon: "fa fa-exclamation-triangle"
-      content: "The list of available apps, services, and APIs is updated automatically whenever a new endpoint is added or removed."
+      icon: "fas fa-info-circle"
+      content: "This dashboard is updated automatically as new services and APIs are deployed into the infrastructure."
 
     services:
       - name: "Blogs"
-        icon: "fas fa-globe"
+        icon: "fas fa-blog"
         items:
           - name: "Personal Blog"
             icon: "fas fa-pencil-alt"
             url: "https://blog.r2b001.site"
             tag: "Blog"
-            target: "_blank"
           - name: "Terminal Website"
-            icon: "fas fa-flag-checkered"
+            icon: "fas fa-terminal"
             url: "https://terminal.app.r2b001.site"
-            tag: "Terminal"
-            target: "_blank"
+            tag: "Frontend"
 
       - name: "Applications"
-        icon: "fas fa-th-large"
+        icon: "fas fa-th"
         items:
           - name: "Odoo ERP"
             icon: "fas fa-cogs"
             url: "https://odoo.app.r2b001.site"
             tag: "ERP"
-            target: "_blank"
           - name: "CTFd Platform"
-            icon: "fas fa-flag-checkered"
+            icon: "fas fa-flag"
             url: "https://ctfd.app.r2b001.site"
             tag: "CTF"
-            target: "_blank"
 
       - name: "Services"
         icon: "fas fa-server"
         items:
           - name: "Rancher K8s"
-            icon: "fas fa-cubes"
+            icon: "assets/k8s.png"
             url: "https://rancher.service.r2b001.site"
             tag: "Kubernetes"
-            target: "_blank"
+          - name: "Grafana"
+            icon: "assets/grafana.png"
+            url: "https://grafana.service.r2b001.site"
+            tag: "Monitoring"
           - name: "OAuth Service"
             icon: "fas fa-user-shield"
             url: "https://oauth.service.r2b001.site"
             tag: "Authentication"
-            target: "_blank"
 
       - name: "APIs"
-        icon: "fas fa-plug"
+        icon: "fas fa-code"
         items:
           - name: "n8n Automation"
             icon: "fas fa-project-diagram"
             url: "https://n8n.api.r2b001.site"
             tag: "Automation"
-            target: "_blank"
+          - name: "Custom API Gateway"
+            icon: "fas fa-random"
+            url: "https://gateway.api.r2b001.site"
+            tag: "Gateway"
 
       - name: "Databases"
         icon: "fas fa-database"
@@ -110,27 +113,23 @@ data:
           - name: "PGAdmin"
             icon: "fas fa-database"
             url: "https://pgadmin.service.r2b001.site/pgadmin4"
-            tag: "Database Admin"
-            target: "_blank"
+            tag: "Postgres"
           - name: "Supabase"
             icon: "fas fa-database"
             url: "https://supabase.service.r2b001.site"
             tag: "Backend"
-            target: "_blank"
 
-      - name: "SOC"
+      - name: "SOC / Security"
         icon: "fas fa-shield-alt"
         items:
           - name: "Security Onion"
             icon: "fas fa-user-secret"
             url: "https://so.service.r2b001.site/"
             tag: "Security"
-            target: "_blank"
-          - name: "pfSense"
+          - name: "pfSense Firewall"
             icon: "fas fa-shield-virus"
-            url: "https://www.youtube.com/shorts/SlZfoJS0zL4"
+            url: "https://pfsense.service.r2b001.site"
             tag: "Firewall"
-            target: "_blank"
 
 ---
 apiVersion: v1
@@ -148,4 +147,8 @@ data:
   k8s.png: |
     (BASE64 OR RAW CONTENT)
   custom.css: |
-    body { background-color: #f0f0f0; }
+    body { 
+      background: linear-gradient(135deg, #1f1f1f 0%, #2d2d2d 100%); 
+    }
+    .title { font-weight: 700; }
+    .card { border-radius: 12px; }
