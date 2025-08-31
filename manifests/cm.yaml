@@ -82,6 +82,10 @@ data:
       - name: "Services"
         icon: "fas fa-server"
         items:
+          - name: "Proxmox Virtual Environment"
+            icon: "assets/k8s.png"
+            url: "https://pve.service.r2b001.site"
+            tag: "Pve"
           - name: "Rancher K8s"
             icon: "assets/k8s.png"
             url: "https://rancher.service.r2b001.site"
@@ -90,6 +94,8 @@ data:
             icon: "fas fa-user-shield"
             url: "https://oauth.service.r2b001.site"
             tag: "Authentication"
+
+            https://pve.service.r2b001.site
 
       - name: "APIs"
         icon: "fas fa-code"
