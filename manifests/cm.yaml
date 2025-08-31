@@ -95,8 +95,6 @@ data:
             url: "https://oauth.service.r2b001.site"
             tag: "Authentication"
 
-            https://pve.service.r2b001.site
-
       - name: "APIs"
         icon: "fas fa-code"
         items:
