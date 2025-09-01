@@ -102,10 +102,6 @@ data:
             icon: "fas fa-project-diagram"
             url: "https://n8n.api.r2b001.site"
             tag: "Automation"
-          - name: "Aicha"
-            icon: "fas fa-project-diagram"
-            url: "https://www.youtube.com/watch?v=gzlHucbD76U"
-            tag: "Song"
 
       - name: "Databases"
         icon: "fas fa-database"
