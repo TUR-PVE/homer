@@ -9,8 +9,8 @@ data:
     subtitle: "Hosted Applications, Services & APIs"
     logo: "assets/logo.png"
     header: true
-    footer: '<p>🚀 Managed with <a href="https://homer-demo.netlify.app/" target="_blank">Homer</a> | Built with <span class="has-text-danger">❤️</span> by DevOps</p>'
-    columns: "3"
+    footer: '<p>🚀 Managed with <a href="https://homer-demo.netlify.app/" target="_blank" rel="noopener">Homer</a> | Built with <span class="has-text-danger">❤️</span> by DevOps</p>'
+    columns: 3
     connectivityCheck: true
     defaults:
       layout: columns
@@ -32,7 +32,7 @@ data:
         card-shadow: rgba(0, 0, 0, 0.08)
         link: "#0056b3"
         link-hover: "#ff6600"
-        background-image: "/assets/your/light/bg.png"
+        background-image: "assets/background-light.png"
       dark:
         highlight-primary: "#0066cc"
         highlight-secondary: "#0099ff"
@@ -46,86 +46,98 @@ data:
         card-shadow: rgba(0, 0, 0, 0.4)
         link: "#0099ff"
         link-hover: "#ffcc00"
-        background-image: "/assets/your/dark/bg.png"
+        background-image: "assets/background-dark.png"
 
     message:
       style: "is-info"
       title: "Information"
-      icon: "fas fa-info-circle"
+      icon: "fa-info-circle"
       content: "This dashboard is updated automatically as new services and APIs are deployed into the infrastructure."
 
     services:
       - name: "Blogs"
-        icon: "fas fa-blog"
+        icon: "fa-blog"
         items:
           - name: "Personal Blog"
-            icon: "fas fa-pencil-alt"
+            logo: "assets/blog-icon.png"
             url: "https://blog.r2b001.site"
             tag: "Blog"
+            target: "_blank"
           - name: "Terminal Website"
-            icon: "fas fa-terminal"
+            logo: "assets/terminal-icon.png"
             url: "https://terminal.app.r2b001.site"
             tag: "Frontend"
+            target: "_blank"
 
       - name: "Applications"
-        icon: "fas fa-th"
+        icon: "fa-th"
         items:
           - name: "Odoo ERP"
-            icon: "fas fa-cogs"
+            logo: "assets/odoo-icon.png"
             url: "https://odoo.app.r2b001.site"
             tag: "ERP"
+            target: "_blank"
           - name: "CTFd Platform"
-            icon: "fas fa-flag"
+            logo: "assets/ctf-icon.png"
             url: "https://ctfd.app.r2b001.site"
             tag: "CTF"
+            target: "_blank"
 
       - name: "Services"
-        icon: "fas fa-server"
+        icon: "fa-server"
         items:
-          - name: "Proxmox Virtual Environment"
-            icon: "assets/k8s.png"
+          - name: "Proxmox VE"
+            logo: "assets/proxmox-icon.png"
             url: "https://pve.service.r2b001.site"
-            tag: "Pve"
-          - name: "Rancher K8s"
-            icon: "assets/k8s.png"
+            tag: "Virtualization"
+            target: "_blank"
+          - name: "Rancher"
+            logo: "assets/rancher-icon.png"
             url: "https://rancher.service.r2b001.site"
             tag: "Kubernetes"
+            target: "_blank"
           - name: "OAuth Service"
-            icon: "fas fa-user-shield"
+            logo: "assets/oauth-icon.png"
             url: "https://oauth.service.r2b001.site"
             tag: "Authentication"
+            target: "_blank"
 
       - name: "APIs"
-        icon: "fas fa-code"
+        icon: "fa-code"
         items:
           - name: "n8n Automation"
-            icon: "fas fa-project-diagram"
+            logo: "assets/n8n-icon.png"
             url: "https://n8n.api.r2b001.site"
             tag: "Automation"
+            target: "_blank"
 
       - name: "Databases"
-        icon: "fas fa-database"
+        icon: "fa-database"
         items:
           - name: "PGAdmin"
-            icon: "fas fa-database"
+            logo: "assets/pgadmin-icon.png"
             url: "https://pgadmin.service.r2b001.site/pgadmin4"
-            tag: "Postgres"
+            tag: "PostgreSQL"
+            target: "_blank"
           - name: "Supabase"
-            icon: "fas fa-database"
+            logo: "assets/supabase-icon.png"
             url: "https://supabase.service.r2b001.site"
             tag: "Backend"
+            target: "_blank"
 
-      - name: "SOC / Security"
-        icon: "fas fa-shield-alt"
+      - name: "Security"
+        icon: "fa-shield-alt"
         items:
           - name: "Security Onion"
-            icon: "fas fa-user-secret"
-            url: "https://so.service.r2b001.site/"
-            tag: "Security"
-          - name: "pfSense Firewall"
-            icon: "fas fa-shield-virus"
+            logo: "assets/securityonion-icon.png"
+            url: "https://so.service.r2b001.site"
+            tag: "SOC"
+            target: "_blank"
+          - name: "pfSense"
+            logo: "assets/pfsense-icon.png"
             url: "https://pfsense.service.r2b001.site"
             tag: "Firewall"
+            target: "_blank"
 
 ---
 apiVersion: v1
@@ -133,18 +145,20 @@ kind: ConfigMap
 metadata:
   name: homer-assets
   namespace: homer
-data:
-  favicon.ico: |
-    (BASE64 OR RAW CONTENT)
-  logo.png: |
-    (BASE64 OR RAW CONTENT)
-  grafana.png: |
-    (BASE64 OR RAW CONTENT)
-  k8s.png: |
-    (BASE64 OR RAW CONTENT)
-  custom.css: |
-    body { 
-      background: linear-gradient(135deg, #1f1f1f 0%, #2d2d2d 100%); 
-    }
-    .title { font-weight: 700; }
-    .card { border-radius: 12px; }
+binaryData:
+  logo.png: <BASE64_ENCODED_CONTENT>
+  favicon.ico: <BASE64_ENCODED_CONTENT>
+  background-light.png: <BASE64_ENCODED_CONTENT>
+  background-dark.png: <BASE64_ENCODED_CONTENT>
+  blog-icon.png: <BASE64_ENCODED_CONTENT>
+  terminal-icon.png: <BASE64_ENCODED_CONTENT>
+  odoo-icon.png: <BASE64_ENCODED_CONTENT>
+  ctf-icon.png: <BASE64_ENCODED_CONTENT>
+  proxmox-icon.png: <BASE64_ENCODED_CONTENT>
+  rancher-icon.png: <BASE64_ENCODED_CONTENT>
+  oauth-icon.png: <BASE64_ENCODED_CONTENT>
+  n8n-icon.png: <BASE64_ENCODED_CONTENT>
+  pgadmin-icon.png: <BASE64_ENCODED_CONTENT>
+  supabase-icon.png: <BASE64_ENCODED_CONTENT>
+  securityonion-icon.png: <BASE64_ENCODED_CONTENT>
+  pfsense-icon.png: <BASE64_ENCODED_CONTENT>
