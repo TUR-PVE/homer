@@ -66,6 +66,10 @@ data:
             icon: "fas fa-terminal"
             url: "https://terminal.app.r2b001.site"
             tag: "Frontend"
+          - name: "Aicha"
+            icon: "fas fa-project-diagram"
+            url: "https://www.youtube.com/watch?v=gzlHucbD76U"
+            tag: "Song"
 
       - name: "Applications"
         icon: "fas fa-th"
