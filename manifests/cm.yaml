@@ -102,6 +102,10 @@ data:
             icon: "fas fa-project-diagram"
             url: "https://n8n.api.r2b001.site"
             tag: "Automation"
+          - name: "linkedin cv generator"
+            icon: "fas fa-project-diagram"
+            url: "https://ext.api.r2b001.site"
+            tag: "Automation"
 
       - name: "Databases"
         icon: "fas fa-database"
