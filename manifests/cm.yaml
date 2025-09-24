@@ -82,6 +82,10 @@ data:
             icon: "fas fa-flag"
             url: "https://ctfd.app.r2b001.site"
             tag: "CTF"
+          - name: "Superset Apache"
+            icon: "fas fa-flag"
+            url: "https://superset.app.r2b001.site"
+            tag: "DATAVIZ"
 
       - name: "Services"
         icon: "fas fa-server"
